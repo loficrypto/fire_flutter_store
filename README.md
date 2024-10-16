@@ -158,3 +158,8 @@ service cloud.firestore {
 }
 
 ```
+
+### Firebase Configuration File
+Ensure you have your Firebase configuration file (e.g., `google-services.json`) placed in the appropriate directory as per Firebase setup instructions.
+
+> This configuration will allow you to interact seamlessly with Firebase services, enabling authentication, data storage, and file storage within your Flutter project.
