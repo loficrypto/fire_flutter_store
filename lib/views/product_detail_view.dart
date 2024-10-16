@@ -4,7 +4,7 @@ import '../models/product.dart';
 class ProductDetailView extends StatelessWidget {
   final Product product;
 
-  const ProductDetailView({Key? key, required this.product}) : super(key: key);
+  ProductDetailView({required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -13,27 +13,23 @@ class ProductDetailView extends StatelessWidget {
         title: Text(product.name),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.network(product.imageUrl),
-            SizedBox(height: 16),
+            SizedBox(height: 16.0),
             Text(
               product.name,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 16.0),
+            Text(
+              '\$${product.price}',
+              style: TextStyle(fontSize: 20.0),
+            ),
+            SizedBox(height: 16.0),
             Text(product.description),
-            SizedBox(height: 16),
-            Text('Price: \$${product.price}'),
-            Spacer(),
-            ElevatedButton(
-              onPressed: () {
-                // Add to cart functionality
-              },
-              child: Text('Add to Cart'),
-            ),
           ],
         ),
       ),
